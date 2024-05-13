@@ -6,7 +6,7 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     Rigidbody2D fisica;
-
+    private float velocidade = 3f;
     private void Awake()
     {
         this.fisica = GetComponent<Rigidbody2D>();
@@ -25,7 +25,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
     void Impulsionar()
     {
-        this.fisica.AddForce(Vector2.up * 2, ForceMode2D.Impulse);
+        this.fisica.AddForce(Vector2.up * 3, ForceMode2D.Impulse);
        // this.fisica.AddForce(Vector2.right * 2, ForceMode2D.Impulse);
     }
 }
