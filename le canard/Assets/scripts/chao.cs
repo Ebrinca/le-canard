@@ -14,7 +14,10 @@ public class chao : MonoBehaviour
     private void Awake()
     {
         this.posicaoInicial = this.transform.position;
-        this.tamanhoImagem = GetComponent<SpriteRenderer>().size.x;
+        float tamanhoImagemOriginal = GetComponent<SpriteRenderer>().size.x;
+        float escala = this.transform.localScale.x;
+        this.tamanhoImagem = tamanhoImagemOriginal * escala;
+
     }
 
 
